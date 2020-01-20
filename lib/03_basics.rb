@@ -14,7 +14,28 @@ def who_is_bigger(a, b, c)
         if b > a && b > c
             return "b is bigger"
         end
+    end
+def reverse_upcase_noLTA(str)
 
+    str = str.reverse.upcase.delete("LTA")
+   return str
 end
 
+def array_42(array)
+      
+    if(array).include?(42)
+    return true
+
+    else 
+    return false
+    end
+end
+
+def magic_array(array)
+
+   array = array.flatten.sort.map {|elem|elem *= 2}
+   array = array.delete_if {|elem| elem % 3 == 0}
+   array = array.uniq
+
+end
 
